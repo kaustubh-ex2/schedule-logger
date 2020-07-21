@@ -36,7 +36,6 @@ const yargs = require("yargs")
                 }]
                 fetch(requestUrl)
                 .then(raw => {
-                    console.log(raw)
                     dataToAppend[0].Status = raw.status
                     dataToAppend[0].ResTime = new Date().toString()
                     return raw.json()
